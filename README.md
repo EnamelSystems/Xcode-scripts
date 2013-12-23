@@ -6,8 +6,8 @@ files from git repository, replacing Xcode header copyright
 description and ignoring Emacs's ^X^S keystroke to avoid
 mis-operation.
 
-Remove Xcode local project files from git
------------------------------------------
+Removing Xcode local project files from git repository
+------------------------------------------------------
 
 By default, when a new Xcode project is created with git repository,
 it adds local project files to git automatically.  This is very
@@ -27,15 +27,18 @@ To run the script, please change directory to the top level of the
 Xcode project then execut xcode-remove-local-project-from-git.sh
 
 ```shell
-$ cd ProjectDir
+$ cd ${ProjectDir}
 $ xcode-remove-local-project-from-git.sh
 ```
 
-Replace copyright description in the Xcode templates
-----------------------------------------------------
+This will automatically add .gitignore file to the current directory.
+Then removing local project files form git repository.
 
-Xcode automatically insert file's header description based upon File
-Templates.
+
+Replacing copyright description in the Xcode templates
+-------------------------------------------------------
+
+Xcode automatically insert header description using File Templates.
 
 ```shell
 $ xcode-copyright-git-init.sh
