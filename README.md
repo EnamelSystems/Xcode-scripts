@@ -2,9 +2,9 @@ Xcode-scripts
 =============
 
 Here are utility script for Xcode development.  Removing local project
-froms git repository, replacing Xcode header template's copyright
-description and ignoring Emacs's ^X^S keystroke to avoid mis-operation
-and so on.
+files from git repository, replacing Xcode header copyright
+description and ignoring Emacs's ^X^S keystroke to avoid
+mis-operation.
 
 Remove Xcode local project files from git
 -----------------------------------------
@@ -28,22 +28,35 @@ Xcode project then execut xcode-remove-local-project-from-git.sh
 
 ```shell
 $ cd ProjectDir
-$ ~/xcode-remove-local-project-from-git.sh
+$ xcode-remove-local-project-from-git.sh
 ```
 
-Replace copyright description of the Xcode templates
+Replace copyright description in the Xcode templates
 ----------------------------------------------------
 
 Xcode automatically insert file's header description based upon File
 Templates.
 
-Xcode disabling Emacs ^X^S keystroke
+```shell
+$ xcode-copyright-git-init.sh
+$ xcode-copyright-original-checkout.sh
+$ xcode-copyright-replace.sh
+```
+
+Disabling Xcode Emacs ^X^S keystroke
 ------------------------------------
 
-For emacs users, it is very common to press ^X^S for saving files.  In
-Xcode it puts strange character to the editing buffer.  To avoid the
-mis-operation, Emacs.idekeybindings is reassign ^X^S to mark buffer.
+For emacs users, it is very common to press ^X^S keystroke during
+editiong.  By default, Xcode puts strange character to the editing
+buffer.  To avoid the mis-operation, Emacs.idekeybindings reassign
+^X^S to "mark buffer" operation.  To reflect the change, please copy
+Emacs.idekeybindings to
+~/Library/Developer/Xcode/UserData/KeyBindings/.
 
 ```
 $ cp Emacs.idekeybindings ~/Library/Developer/Xcode/UserData/KeyBindings/
 ```
+
+Then Xcode->Preferences->Key Bindings menu, select Emacs from "Key
+Bindings Set" dropdown menu.  After that you will see that ^X^S just
+mark the buffer.
