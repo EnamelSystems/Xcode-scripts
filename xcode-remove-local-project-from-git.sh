@@ -3,7 +3,7 @@
 ## Remove Xcode's local project files from git.
 ## Execute once just after new Xcode project is created.
 ##
-## Usage: xcode-remove-local-git.sh
+## Usage: xcode-remove-local-project-from-git.sh
 ##
 
 ## Current directory mus be top git repository
