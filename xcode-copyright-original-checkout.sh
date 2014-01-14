@@ -1,7 +1,7 @@
 #! /bin/sh
 
 XCODE=Xcode
-#XCODE=Xcode51-DP2
+#XCODE=Xcode51-Beta3
 
 BASE="/Applications/${XCODE}.app/Contents/Developer"
 
