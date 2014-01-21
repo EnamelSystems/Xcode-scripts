@@ -3,7 +3,7 @@
 ## Replace Xcode header template's copyright with ${COPYRIGHT}
 ##
 XCODE=Xcode
-#XCODE=Xcode51-Beta3
+#XCODE=Xcode51-Beta4
 
 ## Copyright string.
 COPYRIGHT="Copyright (c) 2014 Enamel Systems. All rights reserved."
