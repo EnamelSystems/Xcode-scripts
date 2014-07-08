@@ -39,12 +39,36 @@ Replacing copyright description in the Xcode templates
 -------------------------------------------------------
 
 Xcode automatically insert header description using File Templates.
+Sometimes we want to customize the header description.  `xcode-copyright-replace.sh` is for it.
+
+Before executing the command, please check first part of the script.
 
 ```shell
-$ xcode-copyright-git-init.sh
-$ xcode-copyright-original-checkout.sh
+#! /bin/sh
+##
+## Replace Xcode header template's copyright with ${COPYRIGHT}
+##
+#XCODE=Xcode
+XCODE=Xcode6-Beta3
+
+## Copyright string.
+COPYRIGHT="Copyright (c) 2014 Enamel Systems. All rights reserved."
+```
+
+Please change XCODE and COPYRIGHT string accordingly.  Then execute:
+
+```shell
 $ xcode-copyright-replace.sh
 ```
+
+will replace the Header's copyright string.  When you execute the command first time, you might to need the initialize git repository to keep original file.
+To do that please execute the command with `-i` option.  Then you can execute `xocode-copyright-replace.sh` after that.
+
+```shell
+$ xcode-copyright-replace.sh -i
+$ xcode-copyright-replace.sh
+```
+
 
 Disabling Xcode Emacs ^X^S keystroke
 ------------------------------------
